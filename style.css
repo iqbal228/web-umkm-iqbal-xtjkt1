@@ -1,0 +1,278 @@
+/* --- Reset & Variabel Warna --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #8B4513; /* Cokelat Roti */
+    --accent: #D4A373;  /* Krem Hangat */
+    --bg-light: #FAEDCD;/* Kuning Pastel Lembut */
+    --text-dark: #2C2C2C;
+    --white: #FFFFFF;
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-dark);
+    background-color: #FDFBF7;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Navbar --- */
+.navbar {
+    background: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.btn-nav {
+    background-color: var(--primary);
+    color: var(--white) !important;
+    padding: 8px 18px;
+    border-radius: 25px;
+}
+
+.btn-nav:hover {
+    background-color: #6d340f;
+}
+
+/* --- Hero Section --- */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+    color: var(--white);
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.hero-content h1 {
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 16px;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    font-weight: 300;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--accent);
+    color: var(--text-dark);
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-primary:hover {
+    background-color: #bc8e5f;
+    color: var(--white);
+}
+
+/* --- Products Section --- */
+.section {
+    padding: 80px 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 50px;
+    color: var(--primary);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    transition: var(--transition);
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.product-img {
+    height: 180px;
+    background-color: var(--bg-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: var(--primary);
+}
+
+.product-info p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.price {
+    point-weight: 600;
+    color: var(--primary);
+    font-size: 18px;
+}
+
+/* --- About Section --- */
+.about-section {
+    background-color: var(--bg-light);
+    padding: 80px 20px;
+}
+
+.about-text h2 {
+    font-size: 30px;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.features-list {
+    list-style: none;
+}
+
+.features-list li {
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: var(--primary);
+}
+
+/* --- Footer --- */
+.footer {
+    background-color: #1a1a1a;
+    color: var(--white);
+    padding: 50px 20px 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.footer-col h3 {
+    margin-bottom: 15px;
+    color: var(--accent);
+}
+
+.footer-col p {
+    color: #bbb;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    font-size: 13px;
+    color: #888;
+}
+
+/* --- Error Page Styles --- */
+.error-body {
+    background-color: var(--bg-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.error-container {
+    padding: 40px;
+}
+
+.error-icon {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.error-container h1 {
+    font-size: 28px;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.error-container p {
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+
